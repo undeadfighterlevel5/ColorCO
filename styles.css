@@ -176,26 +176,26 @@ h1 {
   border-radius: 50%;
   background:
     radial-gradient(circle, transparent 0 58%, rgba(0,0,0,0.95) 58.4% 66.5%, rgba(255,255,255,0.15) 67.2% 70%, transparent 70.4%),
-    conic-gradient(from -90deg, #3d3e39, #141513, #76756d, #1d1f1c, #3d3e39);
+    conic-gradient(from 0deg, #3d3e39, #141513, #76756d, #1d1f1c, #3d3e39);
   filter: drop-shadow(0 0.25rem 0.35rem rgba(0,0,0,0.7));
 }
 
 .hue-wheel .groove {
   background:
     radial-gradient(circle, transparent 0 58%, rgba(0,0,0,0.85) 58.5% 60.8%, transparent 61.2% 69.6%, rgba(255,255,255,0.2) 70% 72%, transparent 72.3%),
-    conic-gradient(from -90deg, red, yellow, lime, cyan, blue, magenta, red);
+    conic-gradient(from 0deg, red, yellow, lime, cyan, blue, magenta, red);
 }
 
 .saturation-wheel .groove {
   background:
     radial-gradient(circle, transparent 0 58%, rgba(0,0,0,0.95) 58.4% 66.5%, rgba(255,255,255,0.15) 67.2% 70%, transparent 70.4%),
-    conic-gradient(from -90deg, #73736f, var(--selected-color));
+    conic-gradient(from 0deg, #73736f, var(--selected-color));
 }
 
 .lightness-wheel .groove {
   background:
     radial-gradient(circle, transparent 0 58%, rgba(0,0,0,0.95) 58.4% 66.5%, rgba(255,255,255,0.15) 67.2% 70%, transparent 70.4%),
-    conic-gradient(from -90deg, #020202, var(--selected-color), #ffffff);
+    conic-gradient(from 0deg, #020202, var(--selected-color), #ffffff);
 }
 
 .center-fill {
