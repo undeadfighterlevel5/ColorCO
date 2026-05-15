@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone HSL Color Wheels</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="slab" aria-labelledby="app-title">
+      <section class="hero">
+        <p class="eyebrow">Ancient chroma mechanism</p>
+        <h1 id="app-title">Stone Color Toggle</h1>
+        <p class="intro">
+          Roll the polished spheres through carved circular grooves to tune hue,
+          intensity, and lightness. Each center aperture updates instantly with
+          the combined HSL color.
+        </p>
+      </section>
+
+      <section class="wheels" aria-label="HSL controls">
+        <article class="wheel-panel" data-control="hue">
+          <div class="wheel-copy">
+            <h2>Hue</h2>
+            <p>Color wheel · <output id="hue-output">210°</output></p>
+          </div>
+          <div
+            class="stone-wheel hue-wheel"
+            id="hue-wheel"
+            role="slider"
+            tabindex="0"
+            aria-label="Hue"
+            aria-valuemin="0"
+            aria-valuemax="360"
+            aria-valuenow="210"
+            aria-valuetext="210 degrees"
+          >
+            <div class="groove"></div>
+            <div class="center-fill" aria-hidden="true"></div>
+            <button class="stone-ball" type="button" tabindex="-1" aria-label="Drag hue stone"></button>
+          </div>
+        </article>
+
+        <article class="wheel-panel" data-control="saturation">
+          <div class="wheel-copy">
+            <h2>Intensity</h2>
+            <p>Saturation · <output id="saturation-output">72%</output></p>
+          </div>
+          <div
+            class="stone-wheel marked-wheel saturation-wheel"
+            id="saturation-wheel"
+            role="slider"
+            tabindex="0"
+            aria-label="Saturation"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="72"
+            aria-valuetext="72 percent"
+          >
+            <div class="groove"></div>
+            <div class="marker-ring" aria-hidden="true"></div>
+            <div class="center-fill" aria-hidden="true"></div>
+            <button class="stone-ball" type="button" tabindex="-1" aria-label="Drag saturation stone"></button>
+          </div>
+        </article>
+
+        <article class="wheel-panel" data-control="lightness">
+          <div class="wheel-copy">
+            <h2>Lightness</h2>
+            <p>Brightness · <output id="lightness-output">52%</output></p>
+          </div>
+          <div
+            class="stone-wheel marked-wheel lightness-wheel"
+            id="lightness-wheel"
+            role="slider"
+            tabindex="0"
+            aria-label="Lightness"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="52"
+            aria-valuetext="52 percent"
+          >
+            <div class="groove"></div>
+            <div class="marker-ring" aria-hidden="true"></div>
+            <div class="center-fill" aria-hidden="true"></div>
+            <button class="stone-ball" type="button" tabindex="-1" aria-label="Drag lightness stone"></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="readout" aria-live="polite">
+        <span>Current stone pigment</span>
+        <strong id="hsl-readout">hsl(210 72% 52%)</strong>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
